@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<XnaContent xmlns:Graphics="Microsoft.Xna.Framework.Content.Pipeline.Graphics">
+  <Asset Type="Graphics:FontDescription">
+    <FontName>Blutschrift</FontName>
+    <Size>50</Size>
+    <Spacing>3</Spacing>
+    <Style>Regular</Style>
+    <CharacterRegions>
+      <CharacterRegion>
+        <Start>&#32;</Start>
+        <End>&#126;</End>
+      </CharacterRegion>
+      <!-- Character Region for the letter "ä" -->
+      <CharacterRegion>
+        <Start>&#228;</Start>
+        <End>&#228;</End>
+      </CharacterRegion>
+      <!-- Character Region for the letter "ö" -->
+      <CharacterRegion>
+        <Start>&#246;</Start>
+        <End>&#246;</End>
+      </CharacterRegion>
+      <!-- Character Region for the letter "ü" -->
+      <CharacterRegion>
+        <Start>&#252;</Start>
+        <End>&#252;</End>
+      </CharacterRegion>
+      <!-- Character Region for the letter "Ä" -->
+      <CharacterRegion>
+        <Start>&#196;</Start>
+        <End>&#196;</End>
+      </CharacterRegion>
+      <!-- Character Region for the letter "Ö" -->
+      <CharacterRegion>
+        <Start>&#214;</Start>
+        <End>&#214;</End>
+      </CharacterRegion>
+      <!-- Character Region for the letter "Ü" -->
+      <CharacterRegion>
+        <Start>&#220;</Start>
+        <End>&#220;</End>
+      </CharacterRegion>
+      <!-- Character Region for the letter "ß" -->
+      <CharacterRegion>
+        <Start>&#223;</Start>
+        <End>&#223;</End>
+      </CharacterRegion>
+    </CharacterRegions>
+  </Asset>
+</XnaContent>

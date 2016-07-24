@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4C475FE4-ECB6-4D25-B7E6-0B773A736A24}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>V3</RootNamespace>
+    <AssemblyName>V3</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>DesktopGL</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;LINUX</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;LINUX NEWMAP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Pool|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Pool\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;LINUX NO_AUDIO</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Feature|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Feature\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;LINUX TEST_OBJECTSMANAGER NEW_MUSIC</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Old Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Old Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;LINUX</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Larger Map|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Larger Map\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;LINUX NEWMAP</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AchievementsAndStatistics.cs" />
+    <Compile Include="Bindings.cs" />
+    <Compile Include="AI\ActionState.cs" />
+    <Compile Include="AI\AiState.cs" />
+    <Compile Include="AI\IAction.cs" />
+    <Compile Include="AI\IAiPlayer.cs" />
+    <Compile Include="AI\IStrategy.cs" />
+    <Compile Include="AI\IWorldView.cs" />
+    <Compile Include="AI\Internal\AbstractAction.cs" />
+    <Compile Include="AI\Internal\AiPlayer.cs" />
+    <Compile Include="AI\Internal\AttackStrategy.cs" />
+    <Compile Include="AI\Internal\IActionFactory.cs" />
+    <Compile Include="AI\Internal\MoveAction.cs" />
+    <Compile Include="AI\Internal\SpawnAction.cs" />
+    <Compile Include="AI\Internal\WorldView.cs" />
+    <Compile Include="Camera\CameraCentered.cs" />
+    <Compile Include="Camera\CameraManager.cs" />
+    <Compile Include="Camera\CameraScrolling.cs" />
+    <Compile Include="Camera\CameraType.cs" />
+    <Compile Include="Camera\ICamera.cs" />
+    <Compile Include="Data\DebugMode.cs" />
+    <Compile Include="Data\IGameStateManager.cs" />
+    <Compile Include="Data\Internal\GameStateManager.cs" />
+    <Compile Include="Data\Internal\OptionsManager.cs" />
+    <Compile Include="Data\Internal\PathManager.cs" />
+    <Compile Include="Data\Internal\SaveGame.cs" />
+    <Compile Include="Data\Internal\SaveGameManager.cs" />
+    <Compile Include="Data\IOptionsManager.cs" />
+    <Compile Include="Data\Options.cs" />
+    <Compile Include="Data\ISaveGame.cs" />
+    <Compile Include="Data\ISaveGameManager.cs" />
+    <Compile Include="Effects\AbstractEffect.cs" />
+    <Compile Include="Effects\BloodBang.cs" />
+    <Compile Include="Effects\BloodExplosion.cs" />
+    <Compile Include="Effects\BloodFountain.cs" />
+    <Compile Include="Effects\EffectsManager.cs" />
+    <Compile Include="Effects\Explosion.cs" />
+    <Compile Include="Effects\HorseEffect.cs" />
+    <Compile Include="Effects\IEffect.cs" />
+    <Compile Include="Effects\IEffectsManager.cs" />
+    <Compile Include="Effects\Quake.cs" />
+    <Compile Include="Effects\SmokeBig.cs" />
+    <Compile Include="Effects\SmokeMedium.cs" />
+    <Compile Include="Effects\SmokeSmall.cs" />
+    <Compile Include="Ellipse.cs" />
+    <Compile Include="Faction.cs" />
+    <Compile Include="Input\IInputManager.cs" />
+    <Compile Include="Input\IKeyEvent.cs" />
+    <Compile Include="Input\IMouseEvent.cs" />
+    <Compile Include="Data\IPathManager.cs" />
+    <Compile Include="Input\Internal\InputManager.cs" />
+    <Compile Include="Input\Internal\KeyEvent.cs" />
+    <Compile Include="Input\Internal\MouseEvent.cs" />
+    <Compile Include="Map\AbstractLayer.cs" />
+    <Compile Include="Map\Area.cs" />
+    <Compile Include="Map\Constants.cs" />
+    <Compile Include="Map\FloorLayer.cs" />
+    <Compile Include="Map\FogOfWar.cs" />
+    <Compile Include="Map\IMapManager.cs" />
+    <Compile Include="Map\MapManager.cs" />
+    <Compile Include="Map\ObjectLayer.cs" />
+    <Compile Include="Map\Pathfinder.cs" />
+    <Compile Include="Map\PathfindingGrid.cs" />
+    <Compile Include="Map\SearchNode.cs" />
+    <Compile Include="Map\TiledParser.cs" />
+    <Compile Include="Map\Tileset.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="Objects\AbstractBuilding.cs" />
+    <Compile Include="Objects\Arrow.cs" />
+    <Compile Include="Objects\BuildingState.cs" />
+    <Compile Include="Objects\Castle.cs" />
+    <Compile Include="Objects\FemalePeasant.cs" />
+    <Compile Include="Objects\Forge.cs" />
+    <Compile Include="Objects\IBuilding.cs" />
+    <Compile Include="Objects\IObjectsManager.cs" />
+    <Compile Include="Objects\King.cs" />
+    <Compile Include="Objects\KingsGuard.cs" />
+    <Compile Include="Objects\Knight.cs" />
+    <Compile Include="Objects\Meatball.cs" />
+    <Compile Include="Objects\Movement\CountStepsMovement.cs" />
+    <Compile Include="Objects\Movement\IMovable.cs" />
+    <Compile Include="Objects\Movement\PlayerMovement.cs" />
+    <Compile Include="Objects\ObjectsManager.cs" />
+    <Compile Include="Objects\Prince.cs" />
+    <Compile Include="Objects\IdGenerator.cs" />
+    <Compile Include="Objects\Selection.cs" />
+    <Compile Include="Objects\SkeletonElite.cs" />
+    <Compile Include="Objects\SkeletonHorse.cs" />
+    <Compile Include="Objects\Sprite\ArrowSprite.cs" />
+    <Compile Include="Objects\Sprite\BucklerFemaleSprite.cs" />
+    <Compile Include="Objects\Sprite\BucklerSprite.cs" />
+    <Compile Include="Objects\Sprite\ChainFemaleSprite.cs" />
+    <Compile Include="Objects\Sprite\ChainSprite.cs" />
+    <Compile Include="Objects\Sprite\ClothFemaleSprite.cs" />
+    <Compile Include="Objects\Sprite\ClothSprite.cs" />
+    <Compile Include="Objects\Sprite\EquipmentType.cs" />
+    <Compile Include="Objects\Sprite\HeadBaldSprite.cs" />
+    <Compile Include="Objects\Sprite\HeadChainFemaleSprite.cs" />
+    <Compile Include="Objects\Sprite\HeadChainSprite.cs" />
+    <Compile Include="Objects\Sprite\HeadFemaleSprite.cs" />
+    <Compile Include="Objects\Sprite\HeadPlateFemaleSprite.cs" />
+    <Compile Include="Objects\Sprite\HeadPlateSprite.cs" />
+    <Compile Include="Objects\Sprite\HeadSprite.cs" />
+    <Compile Include="Objects\Sprite\KingSprite.cs" />
+    <Compile Include="Objects\Sprite\LongswordFemaleSprite.cs" />
+    <Compile Include="Objects\Sprite\LongswordSprite.cs" />
+    <Compile Include="Objects\Sprite\MeatballSprite.cs" />
+    <Compile Include="Objects\Sprite\NecromancerFemaleSprite.cs" />
+    <Compile Include="Objects\Sprite\NudeFemaleSprite.cs" />
+    <Compile Include="Objects\Sprite\NudeSprite.cs" />
+    <Compile Include="Objects\Sprite\PlateFemaleSprite.cs" />
+    <Compile Include="Objects\Sprite\PlateSprite.cs" />
+    <Compile Include="Objects\Sprite\PrinceSprite.cs" />
+    <Compile Include="Objects\Sprite\ShieldFemaleSprite.cs" />
+    <Compile Include="Objects\Sprite\ShieldSprite.cs" />
+    <Compile Include="Objects\Sprite\ShortswordFemaleSprite.cs" />
+    <Compile Include="Objects\Sprite\ShortswordSprite.cs" />
+    <Compile Include="Objects\Sprite\SkeletonArcherSprite.cs" />
+    <Compile Include="Objects\Sprite\SkeletonEliteSprite.cs" />
+    <Compile Include="Objects\Sprite\SkeletonHorseSprite.cs" />
+    <Compile Include="Objects\Sprite\SkeletonRiderSprite.cs" />
+    <Compile Include="Objects\Sprite\StaffFemaleSprite.cs" />
+    <Compile Include="Objects\Sprite\StaffSprite.cs" />
+    <Compile Include="Objects\Sprite\ZombieWithClubSprite.cs" />
+    <Compile Include="Objects\TextureObject.cs" />
+    <Compile Include="Objects\Transformation.cs" />
+    <Compile Include="Objects\Woodhouse.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Quadtree.cs" />
+    <Compile Include="Screens\AchievementsScreen.cs" />
+    <Compile Include="Screens\DeathScreen.cs" />
+    <Compile Include="Screens\DebugScreen.cs" />
+    <Compile Include="Screens\FpsCounter.cs" />
+    <Compile Include="Screens\HudScreen.cs" />
+    <Compile Include="Screens\IScreenManager.cs" />
+    <Compile Include="Screens\LoadScreen.cs" />
+    <Compile Include="Screens\StatisticsScreen.cs" />
+    <Compile Include="Screens\TechdemoScreen.cs" />
+    <Compile Include="Screens\VictoryScreen.cs" />
+    <Compile Include="UpdatesPerSecond.cs" />
+    <Compile Include="V3Game.cs" />
+    <Compile Include="Data\GameState.cs" />
+    <Compile Include="Input\IMouseEventHandler.cs" />
+    <Compile Include="Input\MouseButton.cs" />
+    <Compile Include="Objects\AbstractCreature.cs" />
+    <Compile Include="Objects\Sprite\AbstractSpriteCreature.cs" />
+    <Compile Include="Objects\CreatureFactory.cs" />
+    <Compile Include="Objects\IBasicCreatureFactory.cs" />
+    <Compile Include="Objects\ICreature.cs" />
+    <Compile Include="Objects\IGameObject.cs" />
+    <Compile Include="Objects\Sprite\ISpriteCreature.cs" />
+    <Compile Include="Objects\Movement.cs" />
+    <Compile Include="Objects\Necromancer.cs" />
+    <Compile Include="Objects\MalePeasant.cs" />
+    <Compile Include="Objects\Sprite\NecromancerSprite.cs" />
+    <Compile Include="Objects\Skeleton.cs" />
+    <Compile Include="Objects\Sprite\SkeletonSprite.cs" />
+    <Compile Include="Objects\Zombie.cs" />
+    <Compile Include="Objects\Sprite\ZombieSprite.cs" />
+    <Compile Include="Screens\AbstractScreen.cs" />
+    <Compile Include="Screens\GameScreen.cs" />
+    <Compile Include="Screens\IDrawable.cs" />
+    <Compile Include="Screens\IScreen.cs" />
+    <Compile Include="Screens\IScreenFactory.cs" />
+    <Compile Include="Screens\IUpdatable.cs" />
+    <Compile Include="Screens\MainScreen.cs" />
+    <Compile Include="Screens\MenuActions.cs" />
+    <Compile Include="Screens\OptionsScreen.cs" />
+    <Compile Include="Screens\PauseScreen.cs" />
+    <Compile Include="Screens\ScreenManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Widgets\AbstractMenu.cs" />
+    <Compile Include="Widgets\AbstractTextWidget.cs" />
+    <Compile Include="Widgets\AchievementBox.cs" />
+    <Compile Include="Widgets\Button.cs" />
+    <Compile Include="Widgets\EmptyWidget.cs" />
+    <Compile Include="Widgets\FormMenu.cs" />
+    <Compile Include="Widgets\HorizontalOrientation.cs" />
+    <Compile Include="Widgets\IBasicWidgetFactory.cs" />
+    <Compile Include="Widgets\IClickable.cs" />
+    <Compile Include="Widgets\IImageWidget.cs" />
+    <Compile Include="Widgets\IMenu.cs" />
+    <Compile Include="Widgets\IMenuFactory.cs" />
+    <Compile Include="Widgets\ISelectable.cs" />
+    <Compile Include="Widgets\ITextWidget.cs" />
+    <Compile Include="Widgets\IWidget.cs" />
+    <Compile Include="Widgets\Label.cs" />
+    <Compile Include="Widgets\SelectButton.cs" />
+    <Compile Include="Widgets\VerticalMenu.cs" />
+    <Compile Include="Widgets\WidgetFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.3.2.0\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Factory, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Factory.3.2.1.0\lib\net45-full\Ninject.Extensions.Factory.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenTK">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="NVorbis">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\NVorbis.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CONTROLS.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="Icon.ico" />
+    <Content Include="Content\Buttons\Button-01.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Buttons\Button-01_Pressed.png" />
+    <Content Include="Content\Buttons\Button-02.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Buttons\Button-02_Pressed.png" />
+    <Content Include="Content\Buttons\Button-03.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Buttons\Button-03_Pressed.png" />
+    <Content Include="Content\Buttons\Button-04.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Buttons\Button-04_Pressed.png" />
+    <Content Include="Content\Buttons\Button-05.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Buttons\Button-05_Pressed.png" />
+    <Content Include="Content\Buttons\Button-06.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Buttons\Button-06_Pressed.png" />
+    <Content Include="Content\Buttons\Button-07.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Buttons\Button-07_Pressed.png" />
+    <Content Include="Content\Effects\blood_hit_01.png" />
+    <Content Include="Content\Effects\blood_hit_02.png" />
+    <Content Include="Content\Effects\blood_hit_03.png" />
+    <Content Include="Content\Effects\blood_hit_04.png" />
+    <Content Include="Content\Effects\blood_hit_05.png" />
+    <Content Include="Content\Effects\blood_hit_06.png" />
+    <Content Include="Content\Effects\blood_hit_08.png" />
+    <Content Include="Content\Effects\explosion.png" />
+    <Content Include="Content\Effects\particlefx_03.png" />
+    <Content Include="Content\Effects\particlefx_04.png" />
+    <Content Include="Content\Effects\particlefx_05.png" />
+    <Content Include="Content\Effects\quake.png" />
+    <Content Include="Content\Menu\arrow_white.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Menu\mainscreen.jpg" />
+    <Content Include="Content\Menu\Titel.png" />
+    <Content Include="Content\Sounds\Afraid_to_Go.mp3" />
+    <Content Include="Content\Sounds\explode.wav" />
+    <Content Include="Content\Sounds\explodemini.wav" />
+    <Content Include="Content\Sounds\horse.wav" />
+    <Content Include="Content\Sounds\Knight.wav" />
+    <Content Include="Content\Sounds\Kosta_T_-_06.mp3" />
+    <Content Include="Content\Sounds\Monster_Gigante-Doberman-1334685792.wav" />
+    <Content Include="Content\Sounds\Mummy_Zombie-SoundBible.wav" />
+    <Content Include="Content\Sounds\punch.wav" />
+    <Content Include="Content\Sounds\SkeletonHorse.wav" />
+    <Content Include="Content\Sounds\walking.wav" />
+    <Content Include="Content\Sources\horse_paint.png" />
+    <Content Include="Content\Sources\horse_paint_sc.png" />
+    <Content Include="Content\Sources\horse_tack.png" />
+    <Content Include="Content\Sources\king_head.png" />
+    <Content Include="Content\Sources\SkeletonHorse.png" />
+    <Content Include="Content\Sources\SkeletonRider.png" />
+    <Content Include="Content\Sources\skeleton_horse.png" />
+    <Content Include="Content\Sources\the_triumph_of_death.jpg" />
+    <Content Include="Content\Sources\ZombieWithClub.png" />
+    <Content Include="Content\Sprites\arrows.png" />
+    <Content Include="Content\Sprites\buckler.png" />
+    <Content Include="Content\Sprites\buckler_female.png" />
+    <Content Include="Content\Sprites\chain.png" />
+    <Content Include="Content\Sprites\chain_female.png" />
+    <Content Include="Content\Sprites\cloth.png" />
+    <Content Include="Content\Sprites\cloth_female.png" />
+    <Content Include="Content\Sprites\cloud.png" />
+    <Content Include="Content\Sprites\Ellipse.png" />
+    <Content Include="Content\Sprites\fleischklops.png" />
+    <Content Include="Content\Sprites\fog.png" />
+    <Content Include="Content\Sprites\head.png" />
+    <Content Include="Content\Sprites\head_bald.png" />
+    <Content Include="Content\Sprites\head_chain.png" />
+    <Content Include="Content\Sprites\head_chain_female.png" />
+    <Content Include="Content\Sprites\head_female.png" />
+    <Content Include="Content\Sprites\head_plate.png" />
+    <Content Include="Content\Sprites\head_plate_female.png" />
+    <Content Include="Content\Sprites\king.png" />
+    <Content Include="Content\Sprites\longsword.png" />
+    <Content Include="Content\Sprites\longsword_female.png" />
+    <Content Include="Content\Sprites\necromancer.png" />
+    <Content Include="Content\Sprites\necromancer_female.png" />
+    <Content Include="Content\Sprites\nude.png" />
+    <Content Include="Content\Sprites\nude_female.png" />
+    <Content Include="Content\Sprites\plate.png" />
+    <Content Include="Content\Sprites\plate_female.png" />
+    <Content Include="Content\Sprites\prince.png" />
+    <Content Include="Content\Sprites\selection.png" />
+    <Content Include="Content\Sprites\shield.png" />
+    <Content Include="Content\Sprites\shield_female.png" />
+    <Content Include="Content\Sprites\shortsword.png" />
+    <Content Include="Content\Sprites\shortsword_female.png" />
+    <Content Include="Content\Sprites\skeleton.png" />
+    <Content Include="Content\Sprites\skeleton_archer.png" />
+    <Content Include="Content\Sprites\skeleton_elite.png" />
+    <Content Include="Content\Sprites\skeleton_horse.png" />
+    <Content Include="Content\Sprites\skeleton_rider.png" />
+    <Content Include="Content\Sprites\staff.png" />
+    <Content Include="Content\Sprites\staff_female.png" />
+    <Content Include="Content\Sprites\WhiteRectangle.png" />
+    <Content Include="Content\Sprites\zombie.png" />
+    <Content Include="Content\Sprites\zombie_club.png" />
+    <Content Include="Content\Textures\castle.png" />
+    <Content Include="Content\Textures\EmptyPixel.png" />
+    <Content Include="Content\Textures\grassland.png" />
+    <Content Include="Content\Textures\grassland_trees.png" />
+    <Content Include="Content\Textures\grassland_water.png" />
+    <Content Include="Content\Textures\houses_front.png" />
+    <Content Include="Content\Textures\houses_rear.png" />
+    <Content Include="Content\Textures\medieval_building_tiles.png" />
+    <Content Include="Content\Textures\pathfinder.png" />
+    <None Include="CREDITS.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="OpenTK.dll.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Content\Fonts\Blutschrift.ttf" />
+    <None Include="Content\Fonts\DeathFont.spritefont" />
+    <None Include="Content\Fonts\DejaVuSans.ttf" />
+    <None Include="Content\Fonts\grabstein.ttf" />
+    <None Include="Content\Fonts\MenuFont.spritefont" />
+    <None Include="Content\Fonts\Siegesschriftzug.ttf" />
+    <None Include="Content\Fonts\UnitFont.spritefont" />
+    <None Include="Content\Fonts\VictoryFont.spritefont" />
+    <None Include="Content\Maps\map_grassland.tmx">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Maps\techdemo.tmx" />
+    <None Include="Content\Maps\work_in_progress.tmx">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Sounds\explosion1.ogg" />
+    <None Include="Content\Sounds\impactsplat01.ogg" />
+    <None Include="Content\Sources\castle.xcf" />
+    <None Include="Content\Sources\create_spritesheet.sh" />
+    <None Include="Content\Sources\fleischklops.blend" />
+    <None Include="Content\Sources\fleischklops.xcf" />
+    <None Include="Content\Sources\Horse.blend" />
+    <None Include="Content\Sources\houses_front.xcf" />
+    <None Include="Content\Sources\houses_rear.xcf" />
+    <None Include="Content\Sources\human_construction_set.xcf" />
+    <None Include="Content\Sources\human_construction_set_female.xcf" />
+    <None Include="Content\Sources\king.blend" />
+    <None Include="Content\Sources\necromancer.xcf" />
+    <None Include="Content\Sources\pathfinder.xcf" />
+    <None Include="Content\Sources\prince.blend" />
+    <None Include="Content\Sources\prince.xcf" />
+    <None Include="Content\Sources\selection.xcf" />
+    <None Include="Content\Sources\Skeleton.blend" />
+    <None Include="Content\Sources\SkeletonHorse.blend" />
+    <None Include="Content\Sources\SkeletonRider.blend" />
+    <None Include="Content\Sources\zombie.blend" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+</Project>

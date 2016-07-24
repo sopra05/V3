@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V3", "V3\V3.csproj", "{4C475FE4-ECB6-4D25-B7E6-0B773A736A24}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A47C7086-4DF1-4BBC-885B-9CC9EA3D78F8}"
+	ProjectSection(SolutionItems) = preProject
+		GDD.pdf = GDD.pdf
+		LICENCE.txt = LICENCE.txt
+		README.en.md = README.en.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Screenshots", "Screenshots", "{1D632156-7EC9-4DBD-A79D-2E4686D35FBA}"
+	ProjectSection(SolutionItems) = preProject
+		Screenshots\screen1.jpg = Screenshots\screen1.jpg
+		Screenshots\screen1_s.jpg = Screenshots\screen1_s.jpg
+		Screenshots\screen2.jpg = Screenshots\screen2.jpg
+		Screenshots\screen2_s.jpg = Screenshots\screen2_s.jpg
+		Screenshots\screen3.jpg = Screenshots\screen3.jpg
+		Screenshots\screen3_s.jpg = Screenshots\screen3_s.jpg
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Larger Map|x86 = Larger Map|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C475FE4-ECB6-4D25-B7E6-0B773A736A24}.Debug|x86.ActiveCfg = Debug|x86
+		{4C475FE4-ECB6-4D25-B7E6-0B773A736A24}.Debug|x86.Build.0 = Debug|x86
+		{4C475FE4-ECB6-4D25-B7E6-0B773A736A24}.Larger Map|x86.ActiveCfg = Larger Map|x86
+		{4C475FE4-ECB6-4D25-B7E6-0B773A736A24}.Larger Map|x86.Build.0 = Larger Map|x86
+		{4C475FE4-ECB6-4D25-B7E6-0B773A736A24}.Release|x86.ActiveCfg = Release|x86
+		{4C475FE4-ECB6-4D25-B7E6-0B773A736A24}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
