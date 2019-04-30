@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "V3", "V3\V3.csproj", "{4C475FE4-ECB6-4D25-B7E6-0B773A736A24}"
 EndProject
@@ -23,21 +23,42 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Screenshots", "Screenshots"
 		Screenshots\screen3_s.jpg = Screenshots\screen3_s.jpg
 	EndProjectSection
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "V3-Setup", "V3-Setup\V3-Setup.vdproj", "{96779F49-9A5D-4D6E-8550-86EB99103922}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		Larger Map|x64 = Larger Map|x64
 		Larger Map|x86 = Larger Map|x86
+		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C475FE4-ECB6-4D25-B7E6-0B773A736A24}.Debug|x64.ActiveCfg = Debug|x64
+		{4C475FE4-ECB6-4D25-B7E6-0B773A736A24}.Debug|x64.Build.0 = Debug|x64
+		{4C475FE4-ECB6-4D25-B7E6-0B773A736A24}.Debug|x64.Build.2 = Feature|x64
 		{4C475FE4-ECB6-4D25-B7E6-0B773A736A24}.Debug|x86.ActiveCfg = Debug|x86
 		{4C475FE4-ECB6-4D25-B7E6-0B773A736A24}.Debug|x86.Build.0 = Debug|x86
+		{4C475FE4-ECB6-4D25-B7E6-0B773A736A24}.Larger Map|x64.ActiveCfg = Larger Map|x64
+		{4C475FE4-ECB6-4D25-B7E6-0B773A736A24}.Larger Map|x64.Build.0 = Larger Map|x64
 		{4C475FE4-ECB6-4D25-B7E6-0B773A736A24}.Larger Map|x86.ActiveCfg = Larger Map|x86
 		{4C475FE4-ECB6-4D25-B7E6-0B773A736A24}.Larger Map|x86.Build.0 = Larger Map|x86
+		{4C475FE4-ECB6-4D25-B7E6-0B773A736A24}.Release|x64.ActiveCfg = Release|x64
+		{4C475FE4-ECB6-4D25-B7E6-0B773A736A24}.Release|x64.Build.0 = Release|x64
 		{4C475FE4-ECB6-4D25-B7E6-0B773A736A24}.Release|x86.ActiveCfg = Release|x86
 		{4C475FE4-ECB6-4D25-B7E6-0B773A736A24}.Release|x86.Build.0 = Release|x86
+		{96779F49-9A5D-4D6E-8550-86EB99103922}.Debug|x64.ActiveCfg = Debug
+		{96779F49-9A5D-4D6E-8550-86EB99103922}.Debug|x86.ActiveCfg = Debug
+		{96779F49-9A5D-4D6E-8550-86EB99103922}.Larger Map|x64.ActiveCfg = Release
+		{96779F49-9A5D-4D6E-8550-86EB99103922}.Larger Map|x86.ActiveCfg = Release
+		{96779F49-9A5D-4D6E-8550-86EB99103922}.Release|x64.ActiveCfg = Release
+		{96779F49-9A5D-4D6E-8550-86EB99103922}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F30C7619-6A4B-4F33-B9EB-C2DAB0EC15BE}
 	EndGlobalSection
 EndGlobal
